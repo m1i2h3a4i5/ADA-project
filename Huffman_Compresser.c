@@ -13,8 +13,8 @@ typedef struct freqency
 
 void parse(FILE* input, frequency frequency_check[])
 {
-    int aux_char;
-    while((aux_char = fgetc(input)) != EOF)
+    char aux_char;
+    while((fscanf(input, "%c", &aux_char)) != EOF)
     {
         frequency_check[(unsigned char)aux_char].count++;
     }
